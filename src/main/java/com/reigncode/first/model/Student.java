@@ -4,7 +4,7 @@ import javax.annotation.Generated;
 import javax.persistence.*;
 
 /**
- * Created by johndoe on 28.02.2015.
+ * Created by izestrea on 28.02.2015. represents a student object
  */
 @Entity
 @Table(name = "student")

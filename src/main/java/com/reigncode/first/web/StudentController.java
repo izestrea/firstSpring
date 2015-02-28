@@ -21,11 +21,15 @@ public class StudentController {
     private StudentRepository studentRepository;
 
 
-
+    /**
+     *
+     * @param student object to be saved in the repository
+     * @return status of the operation
+     */
     @RequestMapping(value = "/students/register", method = RequestMethod.POST)
     public ResponseEntity<Void> saveStudent(@RequestBody Student student){
         studentRepository.save(student);
-        return new ResponseEntity<Void>(HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
     @RequestMapping(value = "/students")
     public ResponseEntity<Page <Student>> finAll(Pageable pageable){

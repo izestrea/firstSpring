@@ -11,7 +11,7 @@ import javax.persistence.*;
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id; //test test
+    private Long id; //tra tata
     private String nume;
     private String prenume;
     private int anNastere;

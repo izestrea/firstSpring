@@ -1,0 +1,62 @@
+buildscript {
+    repositories {
+        maven { url "https://repo.spring.io/libs-release" }
+        mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.0.RELEASE")
+        classpath 'org.springframework:springloaded:1.2.0.RELEASE'
+    }
+}
+
+apply plugin: 'war'
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+idea {
+    module {
+        inheritOutputDirs = false
+        outputDir = file("$buildDir/classes/main/")
+    }
+}
+
+jar {
+    baseName = 'spring-data-rest'
+    version = '0.1.1'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url "https://repo.spring.io/libs-release" }
+}
+
+dependencies {
+    //apache poi
+//    compile("org.apache.poi:poi:3.11")
+    compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    compile('org.springframework:springloaded')
+    compile("com.h2database:h2")
+//    compile('mysql:mysql-connector-java')
+//    compile('net.sourceforge.nekohtml:nekohtml:1.9.21') //to avoid angular js directive error parser
+    compile('org.hibernate:hibernate-validator')
+//    compile('org.mongodb:mongo-java-driver:2.13.0') //mongo
+//    compile('commons-io:commons-io:2.4') //apache-commons io
+//    compile('commons-fileupload:commons-fileupload:1.2') //file upload
+
+    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat") //to export as war
+
+    //spring security dependency
+//    compile'org.springframework.boot:spring-boot-starter-security'
+    testCompile 'junit:junit-dep:4.10'
+    testCompile 'org.springframework:spring-test'
+
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
+

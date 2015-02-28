@@ -19,8 +19,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class StudentController {
     @Autowired //injectam obiectul de tip StudentRepository
     private StudentRepository studentRepository;
-
-
     /**
      *
      * @param student object to be saved in the repository

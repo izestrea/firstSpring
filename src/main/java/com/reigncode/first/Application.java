@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 /**
- * Created by johndoe on 28.02.2015.
+ * Created by user on 28.02.2015.
  */
 @SpringBootApplication
 @EnableJpaRepositories

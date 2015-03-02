@@ -39,8 +39,8 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-thymeleaf')
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     compile('org.springframework:springloaded')
-    compile("com.h2database:h2")
-//    compile('mysql:mysql-connector-java')
+//    compile("com.h2database:h2")
+    compile('mysql:mysql-connector-java')
 //    compile('net.sourceforge.nekohtml:nekohtml:1.9.21') //to avoid angular js directive error parser
     compile('org.hibernate:hibernate-validator')
 //    compile('org.mongodb:mongo-java-driver:2.13.0') //mongo

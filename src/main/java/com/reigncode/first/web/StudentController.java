@@ -30,7 +30,7 @@ public class StudentController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
     @RequestMapping(value = "/students")
-    public ResponseEntity<Page <Student>> finAll(Pageable pageable){
+    public ResponseEntity<Page <Student>> findAll(Pageable pageable){
         Page<Student> students = studentRepository.findAll(pageable);
         return new ResponseEntity<>(students, HttpStatus.OK);
     }
